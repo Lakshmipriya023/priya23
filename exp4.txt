@@ -1,0 +1,16 @@
+#!/bin/bash
+	yum install httpd -y
+	
+	sudo systemctl start httpd
+	sudo mkdir /var/www/html/
+	echo "<body bgcolor="cyan">" > /var/www/html/index.html
+	echo "<center>" >> /var/www/html/index.html
+	echo "<Title> AutoScaling -AWS </title>" >> /var/www/html/index.html
+	echo "<marquee behavior="alternate"> Big Billion Sales </marquee>" >> /var/www/html/index.html
+
+	echo "<h1> Big Billion Sales </h1>" >> /var/www/html/index.html
+	echo "<h1> Flipkart Sales </h1>" >> /var/www/html/index.html
+	echo "</center>" >> /var/www/html/index.html
+	echo "</body>"
+	sudo systemctl restart httpd 
+	sudo systemctl enable httpd
